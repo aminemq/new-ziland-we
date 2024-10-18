@@ -1,0 +1,233 @@
+@font-face {
+  font-family: 'XRUN';
+  src: url('Fonts/XRUN.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'XRUN', sans-serif;
+  font-size: 2rem;
+  background: #333333; /* خلفية رمادية داكنة */
+  color: #FFD700; /* نص ذهبي */
+  padding: 4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1c1c; /* خلفية سوداء */
+  padding: 1rem 2rem;
+  margin-bottom: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin-right: 2rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #FFD700; /* نص ذهبي */
+  font-size: 18px;
+  transition: color 0.3s, transform 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+  color: #FFD700;
+  transform: scale(1.1);
+  background-color: #444444; /* خلفية رمادية داكنة */
+}
+
+.cart a {
+  color: #FFD700; /* نص ذهبي */
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s, transform 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.cart a:hover {
+  color: #FFD700;
+  transform: scale(1.1);
+  background-color: #444444; /* خلفية رمادية داكنة */
+}
+
+.products {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #FFD700; /* نص ذهبي */
+  font-size: 3rem;
+}
+
+.all-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product {
+  background-color: #1c1c1c; /* خلفية سوداء */
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(25% - 40px);
+  max-width: 280px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s;
+  border-radius: 10px;
+}
+
+.product:hover img {
+  transform: scale(1.1);
+}
+
+.product-info {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #FFD700; /* نص ذهبي */
+}
+
+.product-price {
+  font-size: 18px;
+  color: #FFD700; /* نص ذهبي */
+}
+
+.product-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #FFD700; /* خلفية ذهبية */
+  color: #1c1c1c; /* نص أسود */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+  align-self: stretch;
+  text-align: center;
+}
+
+.product-btn:hover {
+  background-color: #FFD700;
+  transform: scale(1.05);
+}
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #1c1c1c; /* خلفية سوداء */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #FFD700; /* نص ذهبي */
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#cart-items li {
+  padding: 10px 0;
+  border-bottom: 1px solid #FFD700; /* خط ذهبي */
+  display: flex;
+  justify-content: space-between;
+}
+
+#cart-total {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #FFD700; /* نص ذهبي */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #FFD700; /* نص ذهبي */
+}
+
+#checkout-btn {
+  background-color: #FFD700; /* خلفية ذهبية */
+  color: #1c1c1c; /* نص أسود */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#checkout-btn:hover {
+  background-color: #FFD700;
+}

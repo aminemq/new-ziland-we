@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW ZEALAND - الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/logo.png" type="image/png">
+</head>
+
+<body>
+
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="img/BG.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">الصفحة الرئيسية</a></li>
+            <li><a href="store.html">المتجر</a></li>
+            <li><a href="application.html">التقديمات</a></li>
+            <li><a href="ruels.html">القوانين</a></li>
+            <li><a href="https://discord.gg/WqNnKW9a">الديسكورد</a></li>
+        </ul>
+    </nav>
+    <script src="script.js"></script>
+    <p>مرحبا بكم في خادم ,مقاطعة نيوزلاند
+        افضل خادم من حيث المودات الحصرية والافكار القوية والادارة المحترمة
+    </p>
+    <script>
+           document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function (e) {
+            if (e.ctrlKey && e.shiftKey) {
+                const forbiddenCodes = {
+                    'KeyT': true,
+                    'KeyH': true,
+                    'KeyS': true,
+                    'KeyU': true,
+                    'KeyC': true,
+                    'KeyN': true
+                };
+        
+                if (e.code in forbiddenCodes) {
+                    e.preventDefault();
+                }
+            }
+        
+            if (e.code === "F12" || (e.ctrlKey && (e.code === 'KeyI' || e.code === 'KeyJ' || e.code === 'KeyU'))) {
+                e.preventDefault();
+            }
+        });
+        
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        (function() {
+            let devToolsOpen = false;
+        
+            const threshold = 160;
+            const checkDevTools = function() {
+                if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
+                    devToolsOpen = true;
+                }
+            };
+        
+            setInterval(function() {
+                checkDevTools();
+                if (devToolsOpen) {
+                    window.location.href = 'about:blank';
+                }
+            }, 1000);
+        })();
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.html').then(function(registration) {
+            console.log('Service Worker registered with scope:', registration.scope);
+        }, function(error) {
+            console.log('Service Worker registration failed:', error);
+        });
+    });
+}
+
+        </script> 
+</body>
+
+<!-- Mirrored from urprolepley.web.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2024 22:11:40 GMT -->
+</html>

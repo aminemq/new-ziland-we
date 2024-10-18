@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<!-- Mirrored from urprolepley.web.app/ruels.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2024 22:11:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <title>قوانين مقاطعة نيوزلاند</title>
+<style>
+    @font-face {
+        font-family: 'XRUN';
+        src: url('Fonts/XRUN.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    body {
+        font-family: 'XRUN', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #333333; /* اللون الرمادي الداكن */
+        direction: rtl;
+        text-align: right;
+    }
+
+    .navbar {
+        background-color: #1c1c1c; /* خلفية سوداء */
+        color: #FFD700; /* النص باللون الذهبي */
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    .logo span {
+        font-size: 20px;
+        font-weight: bold;
+        color: #FFD700; /* النص باللون الذهبي */
+    }
+
+    .nav-container {
+        display: flex;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        color: #FFD700; /* اللون الذهبي */
+        text-decoration: none;
+        padding: 10px 15px;
+        background-color: #000000; /* اللون الأسود */
+        border-radius: 5px;
+    }
+
+    .nav-links a:hover {
+        background-color: #444444; /* اللون الرمادي الداكن عند التمرير */
+        color: #FFD700; /* اللون الذهبي */
+    }
+
+    .content {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .sidebar {
+        width: 20%;
+        background-color: #1c1c1c; /* خلفية سوداء */
+        padding: 20px;
+        color: #FFD700; /* النص باللون الذهبي */
+    }
+
+    .rules-box-button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #444444; /* خلفية رمادية داكنة */
+        color: #FFD700; /* النص باللون الذهبي */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .rules-box-button:hover {
+        background-color: #555555; /* لون أغمق عند التمرير */
+    }
+
+    .info-box {
+        width: 80%;
+        background-color: #1c1c1c; /* خلفية سوداء */
+        padding: 20px;
+        color: #FFD700; /* النص باللون الذهبي */
+    }
+
+    .rules-box {
+        display: none;
+    }
+
+    .rule {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #FFD700; /* خط ذهبي */
+        padding-bottom: 10px;
+    }
+
+    .rule h3 {
+        color: #FFD700; /* العنوان باللون الذهبي */
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .rule p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #FFD700; /* النص باللون الذهبي */
+    }
+
+    .highlight {
+        color: #FFD700; /* لون ذهبي للتوضيح */
+        font-weight: bold;
+    }
+
+    .small-circle {
+        display: inline-block;
+        background-color: #FFD700; /* لون الدائرة الذهبي */
+        border-radius: 50%;
+        color: #1c1c1c; /* النص باللون الأسود */
+        text-align: center;
+        padding: 5px 10px;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <span>مقاطعة نيوزلاند</span>
+            <img src="img/logo.png" alt="Logo">
+        </div>
+
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="https://discord.gg/UHv2scBh5Y">الديسكورد</a>
+                <a href="store.html">المتجر</a>
+                <a href="ruels.html">القوانين</a>
+                <a href="application.html">التقديمات</a>
+                <a href="index-2.html">الصفحة الرئيسية</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="sidebar">
+            <button class="rules-box-button" onclick="toggleRules('discord-rules')">قوانين الديسكورد</button>
+            <button class="rules-box-button" onclick="toggleRules('server-rules')">قوانين الخادم</button>
+            <button class="rules-box-button" onclick="toggleRules('prison-times')">أوقات السجون</button>
+            <button class="rules-box-button" onclick="toggleRules('mute-times')">أوقات الميوت</button>
+            <button class="rules-box-button" onclick="toggleRules('ban-times')">أوقات الحظر</button>
+        </div>
+
+        <div class="info-box">
+            <div id="discord-rules" class="rules-box">
+                <div class="rule">
+                    <h3>1. لا تستخدم لغة غير لائقة</h3>
+                    <p>وهذا يشمل الشتائم المفرطة، والافتراءات العنصرية، واستفزاز الآخرين عمدًا.</p>
+                </div>
+                <h3>2.عدم التكلم عن السياسة او الاديان </h3>
+                <p>لا تتكلم عن اي شي سياسي او جماعة او شخص او عدم التكلم في الاديان السموية كلها نحن نحترم الجميع والحميع اخوات</p>
+                <h3>3. عدم نشر سيرفرات او ذكر اسماء</h3>
+                <p>لا تذكر اي تنظيم او خادم او سيرفر مثل سيرفر تايلر هاذا ممنوع فقط اسم الخادم URP</p>
+            </div>
+
+            <div id="server-rules" class="rules-box">
+                <div class="rule">
+                    <h3>1. القاعدة الذهبية</h3>
+                    <p>احترام جميع الاشخاص داخل او خارج الاربي كما تحب معاملتك عامل الاخرين</p>
+                </div>
+                <H3>2.الحقد علي شخص داخل او خارج الاربي</H3>
+                <p>عدم حقد شخص داخل او خارج الاربي بمعني داخل العبة او خارج الي هوا ديسكورد الاحترام واجب في سيرفرنا</p>
+            </div>
+
+            <div id="prison-times" class="rules-box">
+                <div class="rule">
+                    <h3>1. PG</h3>
+                    <p>فعل أشياء خارقة بالواقع.</p>
+                    <div class="small-circle">120m</div>
+                </div>
+                <h3>2. DM</h3>
+                    <p>قتل شخص بدون سبب.</p>
+                    <div class="small-circle">90m</div>
+        
+                    <h3>3. DOS</h3>
+                    <p> شارة بدون ديوتي او ديوتي بدون شارة</p>
+                    <div class="small-circle">180m</div>
+                    <h3>4. SL</h3>
+                    <p>حياه مقززة</p>
+                    <div class="small-circle">30m</div>
+                    <h3>5. KOS</h3>
+                    <p> الحقد علي شخص داخل او خارج الاربي</p>
+                    <div class="small-circle">200m</div>
+                    <h3>6. RK</h3>
+                    <p> قتل الانتقام</p>
+                    <div class="small-circle">220m</div>
+                    <h3>7.PD</h3>
+                    <p>استفزاز الشرطة لغرض المتعة</p>
+                    <div class="small-circle">60m</div>
+                    <h3>8.التخريب المتعمد</h3>
+                    <p>التخريب كا مايك او ب سيارة او ب الاسلحة كل ما تحت بند تخريب</p>
+                    <div class="small-circle">300m</div>
+                    
+                    <div class="small-circle">BAN 1 سنة</div>
+            </div>
+
+            <div id="mute-times" class="rules-box">
+                <div class="rule">
+                    <h3>1. سب طاقم الإدارة</h3>
+                    <p>ميوت (5) ساعات</p>
+                </div>
+                <H3>سب شخص ب الام او الفاظ خارجية</H3>
+                <p>ميوت 7 ايام كاملا</p>
+            </div>
+
+            <div id="ban-times" class="rules-box">
+                <div class="rule">
+                    <h3>1. التخريب بإستخدام أسلحة الديوتي</h3>
+                    <p>حظر 5 ساعات</p>
+
+                    <h3>2. سب ب الفاظ خارجية جميعها</h3>
+                    <p>باند 7 ايام مع تصفير الحساب كاملا</p>
+                    <h3>9. مصيدة الخفافيش</h3>
+                    <p>حظر لمدة سنة</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleRules(section) {
+            document.querySelectorAll('.rules-box').forEach(function(box) {
+                box.style.display = 'none';
+            });
+            document.getElementById(section).style.display = 'block';
+        }
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function (e) {
+            if (e.ctrlKey && e.shiftKey) {
+                const forbiddenCodes = {
+                    'KeyT': true,
+                    'KeyH': true,
+                    'KeyS': true,
+                    'KeyU': true,
+                    'KeyC': true,
+                    'KeyN': true
+                };
+        
+                if (e.code in forbiddenCodes) {
+                    e.preventDefault();
+                }
+            }
+        
+            if (e.code === "F12" || (e.ctrlKey && (e.code === 'KeyI' || e.code === 'KeyJ' || e.code === 'KeyU'))) {
+                e.preventDefault();
+            }
+        });
+        
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        (function() {
+            let devToolsOpen = false;
+        
+            const threshold = 160;
+            const checkDevTools = function() {
+                if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
+                    devToolsOpen = true;
+                }
+            };
+        
+            setInterval(function() {
+                checkDevTools();
+                if (devToolsOpen) {
+                    window.location.href = 'about:blank';
+                }
+            }, 1000);
+        })();
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.html').then(function(registration) {
+            console.log('Service Worker registered with scope:', registration.scope);
+        }, function(error) {
+            console.log('Service Worker registration failed:', error);
+        });
+    });
+}
+
+
+</script>
+</body>
+
+<!-- Mirrored from urprolepley.web.app/ruels.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2024 22:11:54 GMT -->
+</html>

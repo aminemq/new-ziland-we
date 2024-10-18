@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+
+<!-- Mirrored from urprolepley.web.app/application.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2024 22:11:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التقديمات</title>
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="urp.html" type="image/png">
+    <style>
+body {
+            background-color: #121212;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-icon {
+            font-size: 24px;
+            color: #f05454;
+            margin-right: 15px;
+        }
+
+        .card-content {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .status {
+            background-color: #f05454;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .status.open {
+            background-color: #28a745;
+        }    
+
+        header nav {
+            display: flex;
+            justify-content: center; /* توسيط شريط التنقل */
+            align-items: center;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Lora', serif;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+        
+        </style>
+</head>
+
+<body>
+    <audio id="background-music" loop>
+        <source src="public/MP3/MP3.html" type="audio/mpeg">
+        متصفحك لا يدعم تشغيل الصوت.
+    </audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var audio = document.getElementById('background-music');
+            audio.play().catch(function(error) {
+                console.error('لم يتم تشغيل الموسيقى تلقائيًا:', error);
+            });
+        });
+    </script>
+    <header>
+        <h1>التقديمات</h1>
+    </header>
+
+    <div class="container">
+        <div class="card" data-id="الدعم الفني">
+            <div class="card-content">
+                <i class="fas fa-headset card-icon"></i>
+                <span class="card-title">تقديم الدعم الفني</span>
+            </div>
+            <span class="status">مغلق</span>
+        </div>
+
+        <div class="card" data-id="تقديم المنظمات">
+            <div class="card-content">
+                <i class="fas fa-users card-icon"></i>
+                <span class="card-title">تقديم المنظمات</span>
+            </div>
+            <span class="status">مغلق</span>
+        </div>
+
+        <div class="card" data-id="تقديم طاقم الديسكورد">
+            <div class="card-content">
+                <i class="fas fa-gamepad card-icon"></i>
+                <span class="card-title">تقديم طاقم الديسكورد</span>
+            </div>
+            <span class="status">مغلق</span>
+        </div>
+
+        <div class="card" data-id="تقديم الهئية العامة">
+            <div class="card-content">
+                <i class="fas fa-user-tie card-icon"></i>
+                <span class="card-title">تقديم الهيئة العامة</span>
+            </div>
+            <span class="status">مغلق</span>
+        </div>
+
+        <div class="card" data-id="تقديم شارة التوثيق">
+            <div class="card-content">
+                <i class="fas fa-certificate card-icon"></i>
+                <span class="card-title">تقديم شارة التوثيق</span>
+            </div>
+            <span class="status">مغلق</span>
+        </div>
+
+        <div class="card" data-id="تقديم يوتيوبر">
+            <div class="card-content">
+                <i class="fas fa-video card-icon"></i>
+                <span class="card-title">تقديم اليوتيوبر</span>
+            </div>
+            <span class="status">مغلق</span>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var audio = document.getElementById('background-music');
+            audio.play().catch(function(error) {
+                console.error('لم يتم تشغيل الموسيقى تلقائيًا:', error);
+            });
+        });
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function (e) {
+            if (e.ctrlKey && e.shiftKey) {
+                const forbiddenCodes = {
+                    'KeyT': true,
+                    'KeyH': true,
+                    'KeyS': true,
+                    'KeyU': true,
+                    'KeyC': true,
+                    'KeyN': true
+                };
+        
+                if (e.code in forbiddenCodes) {
+                    e.preventDefault();
+                }
+            }
+        
+            if (e.code === "F12" || (e.ctrlKey && (e.code === 'KeyI' || e.code === 'KeyJ' || e.code === 'KeyU'))) {
+                e.preventDefault();
+            }
+        });
+        
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        (function() {
+            let devToolsOpen = false;
+        
+            const threshold = 160;
+            const checkDevTools = function() {
+                if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
+                    devToolsOpen = true;
+                }
+            };
+        
+            setInterval(function() {
+                checkDevTools();
+                if (devToolsOpen) {
+                    window.location.href = 'about:blank';
+                }
+            }, 1000);
+        })();
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('applicationStatus.json')
+                .then(response => response.json())
+                .then(data => {
+                    updateStatuses(data);
+                })
+                .catch(error => console.error('Error fetching JSON:', error));
+    
+            document.querySelectorAll('.card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const cardId = card.getAttribute('data-id');
+                    const statusElement = card.querySelector('.status');
+                    const status = statusElement.textContent;
+    
+                    if (status === 'مفتوح') {
+                        window.location.href = 'form.html';
+                    } else {
+                    }
+                });
+            });
+        });
+    
+        function updateStatuses(statusMap) {
+            document.querySelectorAll('.card').forEach(card => {
+                const cardId = card.getAttribute('data-id');
+                const statusElement = card.querySelector('.status');
+                const status = statusMap[cardId] || 'مغلق';
+    
+                if (status === 'مفتوح') {
+                    statusElement.textContent = 'مفتوح';
+                    statusElement.classList.add('open');
+                    statusElement.classList.remove('closed');
+                } else {
+                    statusElement.textContent = 'مغلق';
+                    statusElement.classList.remove('open');
+                    statusElement.classList.add('closed');
+                }
+            });
+        }
+    </script>
+    
+</body>
+
+
+<!-- Mirrored from urprolepley.web.app/application.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2024 22:11:54 GMT -->
+</html>

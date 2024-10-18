@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'XRUN';
+    src: url('Fonts/XRUN.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'XRUN', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2c2c2c; /* رمادي غامق */
+    color: #ffd700; /* ذهبي */
+}
+
+nav {
+    background-color: #4d4d4d; /* رمادي متوسط */
+    color: #ffd700; /* ذهبي */
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffd700; /* ذهبي */
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #b29500; /* ذهبي داكن */
+}
+
+/* زر ربط الديسكورد */
+#discord-btn {
+            background-color: #666666; /* رمادي */
+            color: #ffd700; /* ذهبي */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            justify-content: space-between;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s; /* تأثير انتقال سلس */
+            font-family: 'Poppins', sans-serif; /* استخدام الخط المخصص */
+        }
+
+        #discord-btn:hover {
+            background-color: #ffd700; /* أصفر */
+            color: #666666; /* رمادي */
+        }
+
+/* تصميم الصفحة الرئيسية */
+main {
+    padding: 2em;
+    text-align: center;
+}
+
+h1 {
+    color: #ffd700; /* ذهبي */
+    font-size: 36px;
+}
+
+p {
+    color: #ffd700; /* ذهبي */
+    font-size: 50px;
+    text-align: center;
+    padding: 20rem;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #discord-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    filter: brightness(40%);
+}

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج التقديم</title>
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <style>
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 1.3rem;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .form-card {
+            background-color: #1e1e1e;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .form-card h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-card label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-card input,
+        .form-card textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #222;
+            color: #fff;
+        }
+
+        .form-card button {
+            background-color: #f05454;
+            border: none;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .form-card button:hover {
+            background-color: #d43f3f;
+        }
+
+        .submitted-message,
+        .error-message {
+            display: none;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .notification-bar {
+            display: none;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        .timer {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="notification-bar" id="notificationBar">تم إرسال طلبك بنجاح!</div>
+
+    <div class="container">
+        <div class="form-card" id="formCard">
+            <div class="timer" id="timer">الوقت المتبقي: 05:00</div>
+            <h2>أسئلة التقديم</h2>
+            <form class="application-form" id="applicationForm">
+                <div class="form-group">
+                    <label for="question1">اسمك الحقيقي:</label>
+                    <input type="text" id="question1" name="question1" required>
+                </div>
+                <div class="form-group">
+                    <label for="question2">عمرك:</label>
+                    <input type="number" id="question2" name="question2" required>
+                </div>
+                <div class="form-group">
+                    <label for="question3">ما تعريف الرقابة و التفتيش:</label>
+                    <input type="text" id="question3" name="question3" required>
+                </div>
+                <div class="form-group">
+                    <label for="question4">ما مهام الرقابة و التفتيش:</label>
+                    <textarea id="question4" name="question4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="question5">اذا قابلت ريبورت و شخص شتمك ما هو ردك؟:</label>
+                    <textarea id="question5" name="question5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="question6">اذا حد فتح تيكت لغرض استفزازك ما هو ردة فعلك؟:</label>
+                    <input type="text" id="question6" name="question6" required>
+                </div>
+                <div class="form-group">
+                    <label for="question7">هل تتبع القوانين بدقة؟:</label>
+                    <input type="text" id="question7" name="question7" required>
+                </div>
+                <div class="form-group">
+                    <label for="question8">كيف تتعامل مع المشاكل بين الأعضاء؟:</label>
+                    <textarea id="question8" name="question8" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="question9">هل كنت إداري في سيرفر آخر؟ إذا نعم، ما هو؟:</label>
+                    <textarea id="question9" name="question9"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="question10">أيدي الديسكورد:</label>
+                    <input type="text" id="question10" name="question10" required>
+                </div>
+                <button type="submit">إرسال</button>
+            </form>
+        </div>
+        <div class="submitted-message" id="submittedMessage">
+            <h2>تم إرسال التقديم بنجاح!</h2>
+            <p>يرجى التحلي بالصبر لحين مراجعة طلبك.</p>
+        </div>
+        <div class="error-message" id="errorMessage">
+            <h2>خطأ!</h2>
+            <p>لم يمر الوقت الكافي منذ آخر تقديم. يرجى المحاولة لاحقًا.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let timeout;
+            const formCard = document.getElementById('formCard');
+            const timerElement = document.getElementById('timer');
+            const submittedMessage = document.getElementById('submittedMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            let timeLeft = 300; 
+            function startTimer() {
+                const timerInterval = setInterval(() => {
+                    const minutes = Math.floor(timeLeft / 60);
+                    const seconds = timeLeft % 60;
+                    timerElement.textContent = `الوقت المتبقي: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                    timeLeft--;
+
+                    if (timeLeft < 0) {
+                        clearInterval(timerInterval);
+                        handleTimeout();
+                    }
+                }, 1000);
+            }
+
+            function handleTimeout() {
+                formCard.style.display = 'none';
+                errorMessage.style.display = 'block';
+            }
+            function debounce(func, wait) {
+                let timeout;
+                return function(...args) {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => func.apply(this, args), wait);
+                };
+            }
+
+            function resetTimer() {
+                clearTimeout(timeout);
+                timeLeft = 300;
+                startTimer();
+            }
+            const debouncedResetTimer = debounce(resetTimer, 1000);
+            window.addEventListener('mousemove', debouncedResetTimer);
+            window.addEventListener('keydown', debouncedResetTimer);
+            startTimer();
+
+            document.getElementById('applicationForm').addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                const lastSubmissionTime = localStorage.getItem('lastSubmissionTime');
+                const now = Date.now();
+                const oneHour = 60 * 60 * 1000;
+
+                if (lastSubmissionTime && (now - lastSubmissionTime) < oneHour) {
+                    document.getElementById('errorMessage').style.display = 'block';
+                    document.getElementById('formCard').style.display = 'none';
+                    return;
+                }
+
+                const formData = {
+                    question1: document.getElementById('question1').value,
+                    question2: document.getElementById('question2').value,
+                    question3: document.getElementById('question3').value,
+                    question4: document.getElementById('question4').value,
+                    question5: document.getElementById('question5').value,
+                    question6: document.getElementById('question6').value,
+                    question7: document.getElementById('question7').value,
+                    question8: document.getElementById('question8').value,
+                    question9: document.getElementById('question9').value,
+                    question10: document.getElementById('question10').value
+                };
+
+                try {
+                    const response = await fetch('', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            content: `**نموذج التقديم**\n
+                            **اسمك الحقيقي:** ${formData.question1}\n
+                            **عمرك:** ${formData.question2}\n
+                            **تعريف الرقابة والتفتيش:** ${formData.question3}\n
+                            **مهام الرقابة والتفتيش:** ${formData.question4}\n
+                            **ردك عند الشتم:** ${formData.question5}\n
+                            **رد فعلك عند الاستفزاز:** ${formData.question6}\n
+                            **اتباع القوانين:** ${formData.question7}\n
+                            **تعامل مع مشاكل الأعضاء:** ${formData.question8}\n
+                            **خبرة إدارية سابقة:** ${formData.question9}\n
+                            **أيدي الديسكورد:** ${formData.question10}`
+                        })
+                    });
+
+                    if (response.ok) {
+                        localStorage.setItem('lastSubmissionTime', now);
+                        document.getElementById('formCard').style.display = 'none';
+                        document.getElementById('submittedMessage').style.display = 'block';
+                    } else {
+                        console.error('Failed to submit form');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
